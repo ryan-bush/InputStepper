@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Float {
+extension Double {
     var decimalPlaces: Int {
            let decimals = String(self).split(separator: ".")[1]
            return decimals == "0" ? 0 : decimals.count

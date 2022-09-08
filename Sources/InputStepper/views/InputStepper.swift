@@ -10,10 +10,10 @@ import SwiftUI
 public struct InputStepper<Content: View>: View, Equatable {
     let content: Content
     @State var valueStore: ValueStore
-    @Binding var value: Float
+    @Binding var value: Double
 
     public init(
-        _ value: Binding<Float>,
+        _ value: Binding<Double>,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self._value = value
@@ -26,7 +26,7 @@ public struct InputStepper<Content: View>: View, Equatable {
             .environment(\.valueStore, valueStore)
     }
 
-    public func withStep(step: Float) -> Self {
+    public func withStep(step: Double) -> Self {
         valueStore.step = step
         return self
     }
@@ -38,7 +38,7 @@ public struct InputStepper<Content: View>: View, Equatable {
 
 struct InputStepper_Previews: PreviewProvider {
     static var previews: some View {
-        @State var value: Float = 0
+        @State var value: Double = 0
         return InputStepper($value) {
             HStack {
                 MinusButton()

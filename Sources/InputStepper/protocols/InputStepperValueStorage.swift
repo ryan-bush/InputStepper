@@ -9,5 +9,5 @@ import Foundation
 import SwiftUI
 
 public protocol InputStepperValueStorage {
-    var value: Float { get set }
+    var value: Double { get set }
 }

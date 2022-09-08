@@ -10,7 +10,7 @@ import SwiftUI
 struct ControlButton<Content: View>: View {
     @GestureState private var press = false
     @State var actionStart: Bool = false
-    let maxDistance: CGFloat = 20
+    let maxDistance: Double = 20
     var action: () -> Void
     var longPressStartAction: () -> Void
     var longPressStopAction: () -> Void

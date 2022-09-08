@@ -10,16 +10,16 @@ import SwiftUI
 
 class ValueStore: ObservableObject {
     let uuid = NSUUID().uuidString
-    @Published var value: Float = 0
+    @Published var value: Double = 0
     var maxValue: Int?
     var minValue = 0
     var speed = 0.95
-    var step: Float = 1
+    var step: Double = 1
     var increaseWork: DispatchWorkItem?
     var decreaseWork: DispatchWorkItem?
-    @Binding var bindedValue: Float
+    @Binding var bindedValue: Double
 
-    init(_ bindedValue: Binding<Float>) {
+    init(_ bindedValue: Binding<Double>) {
         self._bindedValue = bindedValue
         self.value = self.bindedValue
     }

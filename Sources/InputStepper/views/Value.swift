@@ -10,7 +10,7 @@ import SwiftUI
 public struct Value: View {
     @Environment(\.valueStore) var valueStore: ValueStore
     // @ObservedObject var valueObservedStore = valueStore
-    @State var value: Float = 0
+    @State var value: Double = 0
     @State var decimalPlaces: Int
     @State var fixedDecimalPlaces: Bool
     let font: Font

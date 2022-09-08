@@ -9,7 +9,7 @@ import XCTest
 @testable import InputStepper
 
 class ValueStoreTest: XCTestCase {
-    let initialValue: Float = 25.35
+    let initialValue: Double = 25.35
 
     func incrementValueInValueStore() throws {
         let valueStore = ValueStore(.constant(initialValue))

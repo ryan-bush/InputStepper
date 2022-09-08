@@ -8,7 +8,7 @@
 import SwiftUI
 
 private struct ValueStoreKey: EnvironmentKey {
-    @State static var value: Float = 0
+    @State static var value: Double = 0
     static let defaultValue = ValueStore($value)
 }
 
